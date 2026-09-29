@@ -80,60 +80,49 @@
 	overflow-wrap: anywhere;
 }
 
-.spaced-dive-primary {
-	width: 100%;
-	margin: 2px 0 10px;
-	padding: 7px 10px;
-	border-radius: var(--radius-m);
-	border: 1px solid var(--background-modifier-border);
-	background-color: var(--interactive-accent);
-	color: var(--text-on-accent);
-	font-size: var(--font-ui-smaller);
-	cursor: pointer;
-}
-
-.spaced-dive-primary:hover {
-	background-color: var(--interactive-accent-hover);
-}
-
-.spaced-dive-ghost {
-	width: 100%;
-	margin-top: 10px;
-	padding: 6px 10px;
-	border-radius: var(--radius-m);
-	border: 1px solid var(--background-modifier-border);
-	background-color: transparent;
-	color: var(--text-muted);
-	font-size: var(--font-ui-smaller);
-	cursor: pointer;
-}
-
-.spaced-dive-ghost:hover {
-	background-color: var(--background-modifier-hover);
-	color: var(--text-normal);
-}
-
 .spaced-dive-actions {
 	display: flex;
 	gap: 8px;
 	margin: 2px 0 10px;
 }
 
-/* 主操作占两份, 次操作占一份; 文字不换行, 免得两个按钮高度不齐 */
-.spaced-dive-actions button {
+/* 选择器为什么要写成 `button.类名` 而不是光一个类名:
+   Obsidian 内置的按钮规则是 `button:not(.clickable-icon)`, 特异性 (0,1,1)。
+   只写 .spaced-dive-primary 是 (0,1,0), 压不住它 —— 背景色和文字色会被换成
+   中性按钮色, 于是主操作和次操作长得一模一样。这里的写法是 (0,2,1)。
+   (不冲突的属性如 min-height / flex 一直生效, 所以只坏颜色不坏布局。) */
+.spaced-dive-actions button.spaced-dive-primary,
+.spaced-dive-actions button.spaced-dive-ghost {
+	padding: 7px 10px;
+	border-radius: var(--radius-m);
+	border: 1px solid var(--background-modifier-border);
+	font-size: var(--font-ui-smaller);
+	cursor: pointer;
 	white-space: nowrap;
 }
 
-.spaced-dive-actions .spaced-dive-primary {
+/* 主操作: 实心强调色, 占两份宽 */
+.spaced-dive-actions button.spaced-dive-primary {
 	flex: 2;
-	width: auto;
-	margin: 0;
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+	font-weight: 600;
 }
 
-.spaced-dive-actions .spaced-dive-ghost {
+.spaced-dive-actions button.spaced-dive-primary:hover {
+	background-color: var(--interactive-accent-hover);
+}
+
+/* 次操作: 描边, 占一份宽 */
+.spaced-dive-actions button.spaced-dive-ghost {
 	flex: 1;
-	width: auto;
-	margin: 0;
+	background-color: transparent;
+	color: var(--text-muted);
+}
+
+.spaced-dive-actions button.spaced-dive-ghost:hover {
+	background-color: var(--background-modifier-hover);
+	color: var(--text-normal);
 }
 
 .spaced-dive-hint {
@@ -149,7 +138,8 @@
 	gap: 8px;
 }
 
-.spaced-dive-grade {
+/* 同上: 必须带元素名, 否则背景和边框会被 Obsidian 的按钮默认样式盖掉 */
+.spaced-dive-grid button.spaced-dive-grade {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -165,7 +155,7 @@
 	overflow: hidden;
 }
 
-.spaced-dive-grade:hover {
+.spaced-dive-grid button.spaced-dive-grade:hover {
 	background-color: var(--background-modifier-hover);
 	border-color: var(--interactive-accent);
 }

@@ -1,0 +1,13 @@
+# 统一以 LF 入库, 免得跨平台贡献者之间 diff 全是行尾噪音。
+# 对 skills/spaced-dive/spaced-dive.cjs 尤其要紧: 它带 shebang,
+# 行尾一旦变成 CRLF, 在 Linux/macOS 上会被当成 `node\r` 而拒绝执行。
+* text=auto eol=lf
+
+# 二进制, 别碰
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

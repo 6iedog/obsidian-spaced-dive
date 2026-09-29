@@ -1,0 +1,19 @@
+{
+  "name": "spaced-dive",
+  "displayName": "Spaced Dive",
+  "description": "Draw a note from your Obsidian vault on a forgetting curve, then review it with you. Ships the same picking rules and the same progress data as the Obsidian plugin.",
+  "author": {
+    "name": "6iedog",
+    "url": "https://github.com/6iedog"
+  },
+  "homepage": "https://github.com/6iedog/obsidian-spaced-dive#readme",
+  "repository": "https://github.com/6iedog/obsidian-spaced-dive",
+  "license": "MIT",
+  "keywords": [
+    "obsidian",
+    "spaced-repetition",
+    "forgetting-curve",
+    "review",
+    "notes"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "spaced-dive",
+  "name": "Spaced Dive",
+  "version": "0.1.0",
+  "minAppVersion": "1.8.7",
+  "description": "Review whole notes on a forgetting curve. Draw one from your vault, read it, rate it. No flashcards to make.",
+  "author": "6iedog",
+  "authorUrl": "https://github.com/6iedog",
+  "isDesktopOnly": false
+}

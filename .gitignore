@@ -1,0 +1,12 @@
+node_modules/
+main.js
+tests/.smoke.js
+tests/.cli.js
+*.js.map
+.DS_Store
+data.json
+coverage/
+.eslintcache
+
+# skill 包里的 vault.txt 是每个用户自己的库根, 不该进仓库
+skills/spaced-dive/vault.txt

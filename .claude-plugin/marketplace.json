@@ -1,0 +1,14 @@
+{
+  "name": "obsidian-spaced-dive",
+  "description": "The AI assistant side of the Spaced Dive Obsidian plugin: draw a note on a forgetting curve, then review it.",
+  "owner": {
+    "name": "6iedog"
+  },
+  "plugins": [
+    {
+      "name": "spaced-dive",
+      "source": ".",
+      "description": "Draw a note from your Obsidian vault on a forgetting curve and review it together. Shares picking rules and sr-* frontmatter progress with the Obsidian plugin, but does not need Obsidian to be running."
+    }
+  ]
+}

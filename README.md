@@ -78,9 +78,9 @@ You can also **right-click** any note in the file list for *Clear this note's re
 
 The result lands **in the sidebar, not in a modal**. That's deliberate:
 
-1. Click the dice → the sidebar shows what you drew: path, folder, review state, size. **It does not jump to the note.**
+1. Click the dice → the sidebar shows what you drew: its title, review state and size. **It does not jump to the note.**
 2. Click **Open this note** → the note opens in the main pane, the sidebar stays put.
-3. Read, think it through, come back and click a score → recorded, and the panel tells you when you'll see it next.
+3. Read, think it through, come back and click a score → recorded, and the panel tells you when you'll see it next. It then draws the next note by itself, so you can keep going without reaching for the dice again.
 
 Not auto-jumping matters: the panel should let you see what you drew before you decide to read it.
 
@@ -234,7 +234,7 @@ Spaced Dive 从你的库里抽出一篇笔记，放进侧边栏，然后问你�
 
 Spaced Dive 把**一篇笔记当作一个记忆单元**。
 
-隔一阵子它挑出一篇，在侧边栏给你看：在哪个目录、多久没碰过了、复习过几次。你读一遍，回想它讲了什么，然后给一个 0 到 5 的分数。这个分数决定下次什么时候再见到它。
+隔一阵子它挑出一篇，在侧边栏给你看：多久没碰过了、复习过几次。你读一遍，回想它讲了什么，然后给一个 0 到 5 的分数。这个分数决定下次什么时候再见到它。
 
 除此之外什么都不变。笔记还是你的笔记 —— 插件只往头部加几个字段。
 
@@ -298,9 +298,9 @@ Spaced Dive 把它倒过来。你的笔记本身就是单元，你要做的只�
 
 抽卡结果**落在侧边栏，不是弹窗**。这是刻意的：
 
-1. 点骰子 → 侧边栏显示抽到了什么：路径、分区、复习状态、体量。**不会自动跳转到笔记。**
+1. 点骰子 → 侧边栏显示抽到了什么：标题、复习状态、体量。**不会自动跳转到笔记。**
 2. 点「打开这篇笔记」→ 笔记在主区打开，侧边栏原地等着。
-3. 读完、想过一遍，回到侧边栏点一个分数 → 登记完成，面板告诉你下次什么时候见。
+3. 读完、想过一遍，回到侧边栏点一个分数 → 登记完成，面板告诉你下次什么时候见，**然后自动给你下一篇**，不用再回手点一次骰子。
 
 不自动跳转很重要：面板得先让你看清抽到了什么，看不看由你决定。
 

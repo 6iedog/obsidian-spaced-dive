@@ -32,8 +32,10 @@ export const en = {
 		nothingToPick: "Nothing to draw",
 		archived: 'Archived "{name}" — it will not come up again',
 		archivedDry: 'Dry run — would archive "{name}", nothing written',
-		gradedDry: "Dry run — rated {q}, due in {days} days (nothing written)",
-		graded: "Recorded — see you in {days} days",
+		// 带上笔记名是必须的: 打完分会自动抽下一张, 这条结果就显示在
+		// **下一篇**的卡片上方 —— 不写名字的话会被读成在说新抽到的那篇。
+		gradedDry: 'Dry run — would record "{name}" at {q}, due in {days} days',
+		graded: 'Recorded "{name}" — see you in {days} days',
 		stats: "{total} notes · {seen} reviewed ({pct}%) · {due} due",
 		cleared: "Cleared this note's review record",
 		clearedAll: "All review records cleared",

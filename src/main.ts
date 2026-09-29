@@ -317,7 +317,11 @@ export default class SpacedDivePlugin extends Plugin {
 		}
 
 		if (this.settings.dryRun) {
-			return t("notice.gradedDry", { q: quality, days });
+			return t("notice.gradedDry", {
+				name: candidate.file.basename,
+				q: quality,
+				days,
+			});
 		}
 
 		await this.store.write(candidate.file, candidate.path, patch);
@@ -337,7 +341,7 @@ export default class SpacedDivePlugin extends Plugin {
 		this.dueCache = null;
 		this.refreshStatusBar();
 
-		return t("notice.graded", { days });
+		return t("notice.graded", { name: candidate.file.basename, days });
 	}
 
 	private showStats(): void {

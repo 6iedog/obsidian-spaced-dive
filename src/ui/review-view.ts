@@ -379,7 +379,23 @@ export class ReviewView extends ItemView {
 		const target = this.target;
 		if (!target) return;
 		this.result = await this.plugin.grade(target, quality);
-		// 处理完就回到"当前笔记"。不自动抽下一张 —— 打分结果要先看得见。
+
+		// 打完分直接给下一篇 —— 连续复习是主线用法, 每篇都回手点一次骰子太累。
+		// 这里刻意不复用 setDrawn(): 它会清空 result, 而刚那一下对应的
+		// "多少天后再见"必须留在面板上。结果文案里带了篇名, 所以它挂在下一张
+		// 卡片上方也不会被误读成在说这一张。
+		const next = await this.plugin.drawOne();
+		if (next) {
+			this.mode = "draw";
+			this.target = next;
+			this.emptyReason = "";
+			this.emptyHint = "";
+			this.render();
+			return;
+		}
+
+		// 抽不到下一张(池子空 / 到了每日上限 / 全复习完): 沿用原来的收尾 ——
+		// 回到"当前笔记", 让结果和那条 Notice 一起把情况说清楚。
 		this.mode = "follow";
 		this.target = null;
 		await this.alignToActive({ autoDraw: false });

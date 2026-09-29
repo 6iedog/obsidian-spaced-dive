@@ -80,7 +80,7 @@ The result lands **in the sidebar, not in a modal**. That's deliberate:
 
 1. Click the dice → the sidebar shows what you drew: its title, review state and size. **It does not jump to the note.**
 2. Click **Open this note** → the note opens in the main pane, the sidebar stays put.
-3. Read, think it through, come back and click a score → recorded, and the panel tells you when you'll see it next. It then draws the next note by itself, so you can keep going without reaching for the dice again.
+3. Read, think it through, come back and click a score → recorded, and the next note is drawn for you. Keep going without reaching for the dice again. (Dry runs and archiving do show a message — otherwise you couldn't tell whether anything was written.)
 
 Not auto-jumping matters: the panel should let you see what you drew before you decide to read it.
 
@@ -300,7 +300,7 @@ Spaced Dive 把它倒过来。你的笔记本身就是单元，你要做的只�
 
 1. 点骰子 → 侧边栏显示抽到了什么：标题、复习状态、体量。**不会自动跳转到笔记。**
 2. 点「打开这篇笔记」→ 笔记在主区打开，侧边栏原地等着。
-3. 读完、想过一遍，回到侧边栏点一个分数 → 登记完成，面板告诉你下次什么时候见，**然后自动给你下一篇**，不用再回手点一次骰子。
+3. 读完、想过一遍，回到侧边栏点一个分数 → 登记完成，**直接给你下一篇**，不用再回手点一次骰子。（只有演练模式和封存会额外给一句提示 —— 不然你分不清刚才到底写没写进去。）
 
 不自动跳转很重要：面板得先让你看清抽到了什么，看不看由你决定。
 

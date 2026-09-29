@@ -239,10 +239,9 @@ var en = {
     nothingToPick: "Nothing to draw",
     archived: 'Archived "{name}" \u2014 it will not come up again',
     archivedDry: 'Dry run \u2014 would archive "{name}", nothing written',
-    // 带上笔记名是必须的: 打完分会自动抽下一张, 这条结果就显示在
-    // **下一篇**的卡片上方 —— 不写名字的话会被读成在说新抽到的那篇。
+    // 带笔记名是必须的: 这条会显示在**下一篇**卡片的上方, 不写名字
+    // 会被读成在说新抽到的那篇。(普通打分不提示 —— 见 main.ts 的 grade())
     gradedDry: 'Dry run \u2014 would record "{name}" at {q}, due in {days} days',
-    graded: 'Recorded "{name}" \u2014 see you in {days} days',
     stats: "{total} notes \xB7 {seen} reviewed ({pct}%) \xB7 {due} due",
     cleared: "Cleared this note's review record",
     clearedAll: "All review records cleared",
@@ -518,10 +517,9 @@ var zh = {
     nothingToPick: "\u6CA1\u6709\u53EF\u62BD\u7684\u7B14\u8BB0",
     archived: "\u5DF2\u5C01\u5B58\u300A{name}\u300B\uFF0C\u4E0D\u518D\u62BD\u5230",
     archivedDry: "\u6F14\u7EC3 \xB7 \u4F1A\u5C01\u5B58\u300A{name}\u300B\uFF0C\u672A\u5199\u5165",
-    // 带上篇名是必须的: 打完分会自动抽下一张, 这条结果就落在**下一篇**的
-    // 卡片上方 —— 不写名字会被读成在说新抽到的那篇。
+    // 带篇名是必须的: 这条会落在**下一篇**卡片的上方, 不写名字会被读成
+    // 在说新抽到的那篇。(普通打分不提示 —— 见 main.ts 的 grade())
     gradedDry: "\u6F14\u7EC3 \xB7 \u300A{name}\u300B\u4F1A\u8BB0 {q}\uFF0C{days} \u5929\u540E\u5230\u671F\uFF08\u672A\u5199\u5165\uFF09",
-    graded: "\u300A{name}\u300B\u5DF2\u767B\u8BB0\uFF0C{days} \u5929\u540E\u518D\u89C1",
     stats: "\u5171 {total} \u7BC7 \xB7 \u590D\u4E60\u8FC7 {seen} \u7BC7 ({pct}%) \xB7 \u5F85\u590D\u4E60 {due} \u7BC7",
     cleared: "\u5DF2\u6E05\u9664\u8FD9\u7BC7\u7684\u590D\u4E60\u8BB0\u5F55",
     clearedAll: "\u590D\u4E60\u8BB0\u5F55\u5DF2\u6E05\u7A7A",

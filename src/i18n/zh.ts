@@ -29,10 +29,9 @@ export const zh: Dict = {
 		nothingToPick: "没有可抽的笔记",
 		archived: "已封存《{name}》，不再抽到",
 		archivedDry: "演练 · 会封存《{name}》，未写入",
-		// 带上篇名是必须的: 打完分会自动抽下一张, 这条结果就落在**下一篇**的
-		// 卡片上方 —— 不写名字会被读成在说新抽到的那篇。
+		// 带篇名是必须的: 这条会落在**下一篇**卡片的上方, 不写名字会被读成
+		// 在说新抽到的那篇。(普通打分不提示 —— 见 main.ts 的 grade())
 		gradedDry: "演练 · 《{name}》会记 {q}，{days} 天后到期（未写入）",
-		graded: "《{name}》已登记，{days} 天后再见",
 		stats: "共 {total} 篇 · 复习过 {seen} 篇 ({pct}%) · 待复习 {due} 篇",
 		cleared: "已清除这篇的复习记录",
 		clearedAll: "复习记录已清空",

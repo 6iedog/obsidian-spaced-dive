@@ -378,6 +378,9 @@ export class ReviewView extends ItemView {
 	private async grade(quality: number): Promise<void> {
 		const target = this.target;
 		if (!target) return;
+		// 普通打分返回空串, 面板就不显示任何提示 —— 已经自动给下一篇了,
+		// 再挂一句"已登记 N 天后再见"只是噪音。演练模式和封存会返回文案,
+		// 那两种情况用户确实需要被告知(一个是不写盘, 一个是退出池子)。
 		this.result = await this.plugin.grade(target, quality);
 
 		// 打完分直接给下一篇 —— 连续复习是主线用法, 每篇都回手点一次骰子太累。

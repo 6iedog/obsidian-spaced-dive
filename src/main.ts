@@ -341,7 +341,10 @@ export default class SpacedDivePlugin extends Plugin {
 		this.dueCache = null;
 		this.refreshStatusBar();
 
-		return t("notice.graded", { name: candidate.file.basename, days });
+		// 普通打分不返回提示文案 —— 面板打完分会自动抽下一篇, 再挂一句
+		// "已登记 N 天后再见"只是噪音。上面两个分支是例外: 演练模式不提示的话
+		// 用户分不清有没有写进去, 封存则是"这篇从此退出池子", 都值得说一声。
+		return "";
 	}
 
 	private showStats(): void {

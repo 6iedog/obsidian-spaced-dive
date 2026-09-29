@@ -216,6 +216,16 @@ Push the commit and the tag, then attach `main.js`, `manifest.json` and
 
 MIT — see [LICENSE](./LICENSE).
 
+## Sponsoring
+
+Spaced Dive is free — no account, no telemetry, nothing gated behind a paywall.
+
+If it earns its keep in your vault, you can support its development on Afdian (a Chinese creator-support platform, roughly Ko-fi):
+
+[<img src="https://static.afdiancdn.com/static/img/logo/logo.png" alt="Sponsor Spaced Dive on Afdian" width="44" height="44">](https://afdian.com/a/6iedog)
+
+[Afdian](https://afdian.com/a/6iedog)
+
 <br>
 
 ---
@@ -431,3 +441,13 @@ npm version patch        # 或 minor / major
 ## License
 
 MIT，见 [LICENSE](./LICENSE)。
+
+## 赞助
+
+Spaced Dive 免费，没有账号，也没有遥测，没有任何东西被锁在付费墙后面。
+
+如果它在你库里挣到了一个位置，可以到爱发电支持一下：
+
+[<img src="https://static.afdiancdn.com/static/img/logo/logo.png" alt="在爱发电赞助 Spaced Dive" width="44" height="44">](https://afdian.com/a/6iedog)
+
+[爱发电](https://afdian.com/a/6iedog)

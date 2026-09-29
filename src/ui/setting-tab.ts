@@ -1,10 +1,30 @@
-import { App, Notice, PluginSettingTab, Setting } from "obsidian";
+import {
+	App,
+	normalizePath,
+	Notice,
+	PluginSettingTab,
+	Setting,
+} from "obsidian";
 import type SpacedDivePlugin from "../main";
 import { parsePathList } from "../utils";
 import { setLocale, t } from "../i18n";
 import { resolveLocale } from "../i18n/locale";
 import type { UiLanguage } from "../settings";
 import { REPO_NAME, SKILL_DIR_URL, SKILL_INSTALL_CMD } from "../constants";
+
+/**
+ * 读用户手敲的目录列表。
+ *
+ * parsePathList 只切行、去空白; 这里再过一道 Obsidian 的 normalizePath ——
+ * Windows 输入的反斜杠、多余的首尾斜杠、从网页或 PDF 粘来的不间断空格,
+ * 都会被统一成 vault 内部的写法。不过这一关, `A\B` 这类输入永远匹配不上。
+ *
+ * 为什么不在 parsePathList 里做: utils.ts 是和命令行版共用的, 那条路径跑在
+ * Node 里, 加载不到 obsidian 模块。
+ */
+function readFolderList(raw: string): string[] {
+	return parsePathList(raw).map((p) => normalizePath(p));
+}
 
 export class SpacedDiveSettingTab extends PluginSettingTab {
 	constructor(
@@ -64,7 +84,7 @@ export class SpacedDiveSettingTab extends PluginSettingTab {
 						.setPlaceholder(t("settings.scope.include.placeholder"))
 						.setValue(this.plugin.settings.includeFolders.join("\n"))
 						.onChange(async (v) => {
-							this.plugin.settings.includeFolders = parsePathList(v);
+							this.plugin.settings.includeFolders = readFolderList(v);
 							await this.plugin.saveSettings();
 						}),
 				);
@@ -78,7 +98,7 @@ export class SpacedDiveSettingTab extends PluginSettingTab {
 					.setPlaceholder(t("settings.scope.exclude.placeholder"))
 					.setValue(this.plugin.settings.excludeFolders.join("\n"))
 					.onChange(async (v) => {
-						this.plugin.settings.excludeFolders = parsePathList(v);
+						this.plugin.settings.excludeFolders = readFolderList(v);
 						await this.plugin.saveSettings();
 					}),
 			);

@@ -33,7 +33,7 @@ var DEFAULT_INTERVALS = [1, 3, 7, 16, 35, 90, 180, 365, 730];
 var REPO_SLUG = "6iedog/obsidian-spaced-dive";
 var REPO_URL = `https://github.com/${REPO_SLUG}`;
 var SKILL_INSTALL_CMD = `npx skills add ${REPO_SLUG}`;
-var SKILL_DIR_URL = `${REPO_URL}/tree/main/skills/spaced-dive`;
+var SKILL_DIR_URL = `${REPO_URL}/tree/master/skills/spaced-dive`;
 
 // src/settings.ts
 var DEFAULT_SETTINGS = {

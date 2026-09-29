@@ -23,4 +23,4 @@ export const REPO_URL = `https://github.com/${REPO_SLUG}`;
 export const SKILL_INSTALL_CMD = `npx skills add ${REPO_SLUG}`;
 
 /** 技能包在仓库里的位置, 设置面板里指向它 */
-export const SKILL_DIR_URL = `${REPO_URL}/tree/main/skills/spaced-dive`;
+export const SKILL_DIR_URL = `${REPO_URL}/tree/master/skills/spaced-dive`;

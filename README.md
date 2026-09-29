@@ -6,7 +6,7 @@
 
 Spaced Dive draws one note out of your vault, puts it in the sidebar, and asks what you remember. You read it, you rate it, it comes back later. It's built for the vault you've been writing for years and almost never reopen.
 
-<img src="./images/screenshot.png" alt="Spaced Dive in the sidebar: a note's review state and the 0–5 score grid" width="618">
+<img src="./images/screenshot.png" alt="Spaced Dive in the sidebar: a drawn note, its review state, the two actions and the 0–5 score grid" width="614">
 
 ---
 
@@ -226,7 +226,7 @@ MIT — see [LICENSE](./LICENSE).
 
 Spaced Dive 从你的库里抽出一篇笔记，放进侧边栏，然后问你：还记得什么？你读一遍、打个分，它过些日子再来。它是为那种「写了一千多篇，但八成再没打开过」的库做的。
 
-<img src="./images/screenshot.png" alt="侧边栏里的 Spaced Dive：一篇笔记的复习状态与 0–5 评分格" width="618">
+<img src="./images/screenshot.png" alt="侧边栏里的 Spaced Dive：抽到的一篇笔记、它的复习状态、两个操作按钮，以及 0–5 评分格" width="614">
 
 ---
 
